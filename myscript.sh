@@ -161,11 +161,70 @@ ls -l | grep "^d"
 # &> - All
 # < - Input
 
-# SORTING
-sort file.txt
+# STDOUT
+echo "Hello World" > hello.txt
 
-# REVERSE SORTING
-sort -r file.txt
+# STDERR
+echo "Hello World" 2> error.txt
 
-# NUMERICAL SORTING
-sort -n file.txt
+# STDOUT AND STDERR
+echo "Hello World" &> hello.txt
+
+# STDIN
+cat < hello.txt
+
+# CHECK EXIT STATUS
+echo $? # 0 = success, 1 = failure
+
+# CREATE ALIAS
+alias hello="echo Hello World"
+
+# UNSET ALIAS
+unalias hello
+
+# CREATE FUNCTION
+function hello() {
+    echo "Hello World"
+}
+
+# EXPORT FUNCTION
+export -f hello
+
+# CREATE VARIABLE
+NAME="Ernest"
+
+# EXPORT VARIABLE
+export NAME
+
+# RUN SCRIPT
+./hello.sh
+
+# RUN SCRIPT WITH BASH
+bash hello.sh
+
+# RUN SCRIPT WITH SH
+sh hello.sh
+
+# RUN SCRIPT WITH ZSH
+zsh hello.sh
+
+# RUN SCRIPT WITH SHELL
+shell hello.sh
+
+# RUN SCRIPT WITH KSH
+ksh hello.sh
+
+# RUN SCRIPT WITH CSH
+csh hello.sh
+
+# RUN SCRIPT WITH TCSH
+tcsh hello.sh
+
+# RUN SCRIPT WITH FISH
+fish hello.sh
+
+# RUN SCRIPT WITH DASH
+dash hello.sh
+
+# RUN SCRIPT WITH ASH
+ash hello.sh
